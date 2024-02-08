@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'materi_bloc.dart';
+part of 'answer_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,58 +15,58 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$MateriEvent {
+mixin _$AnswerEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getMateri,
+    required TResult Function(int soalId, String jawaban) setAnswer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getMateri,
+    TResult? Function(int soalId, String jawaban)? setAnswer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getMateri,
+    TResult Function(int soalId, String jawaban)? setAnswer,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_GetAllMateri value) getMateri,
+    required TResult Function(_setAnswer value) setAnswer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_GetAllMateri value)? getMateri,
+    TResult? Function(_setAnswer value)? setAnswer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_GetAllMateri value)? getMateri,
+    TResult Function(_setAnswer value)? setAnswer,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MateriEventCopyWith<$Res> {
-  factory $MateriEventCopyWith(
-          MateriEvent value, $Res Function(MateriEvent) then) =
-      _$MateriEventCopyWithImpl<$Res, MateriEvent>;
+abstract class $AnswerEventCopyWith<$Res> {
+  factory $AnswerEventCopyWith(
+          AnswerEvent value, $Res Function(AnswerEvent) then) =
+      _$AnswerEventCopyWithImpl<$Res, AnswerEvent>;
 }
 
 /// @nodoc
-class _$MateriEventCopyWithImpl<$Res, $Val extends MateriEvent>
-    implements $MateriEventCopyWith<$Res> {
-  _$MateriEventCopyWithImpl(this._value, this._then);
+class _$AnswerEventCopyWithImpl<$Res, $Val extends AnswerEvent>
+    implements $AnswerEventCopyWith<$Res> {
+  _$AnswerEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -83,7 +83,7 @@ abstract class _$$StartedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StartedImplCopyWithImpl<$Res>
-    extends _$MateriEventCopyWithImpl<$Res, _$StartedImpl>
+    extends _$AnswerEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
@@ -97,7 +97,7 @@ class _$StartedImpl implements _Started {
 
   @override
   String toString() {
-    return 'MateriEvent.started()';
+    return 'AnswerEvent.started()';
   }
 
   @override
@@ -113,7 +113,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getMateri,
+    required TResult Function(int soalId, String jawaban) setAnswer,
   }) {
     return started();
   }
@@ -122,7 +122,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getMateri,
+    TResult? Function(int soalId, String jawaban)? setAnswer,
   }) {
     return started?.call();
   }
@@ -131,7 +131,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getMateri,
+    TResult Function(int soalId, String jawaban)? setAnswer,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -144,7 +144,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_GetAllMateri value) getMateri,
+    required TResult Function(_setAnswer value) setAnswer,
   }) {
     return started(this);
   }
@@ -153,7 +153,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_GetAllMateri value)? getMateri,
+    TResult? Function(_setAnswer value)? setAnswer,
   }) {
     return started?.call(this);
   }
@@ -162,7 +162,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_GetAllMateri value)? getMateri,
+    TResult Function(_setAnswer value)? setAnswer,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -172,72 +172,106 @@ class _$StartedImpl implements _Started {
   }
 }
 
-abstract class _Started implements MateriEvent {
+abstract class _Started implements AnswerEvent {
   const factory _Started() = _$StartedImpl;
 }
 
 /// @nodoc
-abstract class _$$GetAllMateriImplCopyWith<$Res> {
-  factory _$$GetAllMateriImplCopyWith(
-          _$GetAllMateriImpl value, $Res Function(_$GetAllMateriImpl) then) =
-      __$$GetAllMateriImplCopyWithImpl<$Res>;
+abstract class _$$setAnswerImplCopyWith<$Res> {
+  factory _$$setAnswerImplCopyWith(
+          _$setAnswerImpl value, $Res Function(_$setAnswerImpl) then) =
+      __$$setAnswerImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int soalId, String jawaban});
 }
 
 /// @nodoc
-class __$$GetAllMateriImplCopyWithImpl<$Res>
-    extends _$MateriEventCopyWithImpl<$Res, _$GetAllMateriImpl>
-    implements _$$GetAllMateriImplCopyWith<$Res> {
-  __$$GetAllMateriImplCopyWithImpl(
-      _$GetAllMateriImpl _value, $Res Function(_$GetAllMateriImpl) _then)
+class __$$setAnswerImplCopyWithImpl<$Res>
+    extends _$AnswerEventCopyWithImpl<$Res, _$setAnswerImpl>
+    implements _$$setAnswerImplCopyWith<$Res> {
+  __$$setAnswerImplCopyWithImpl(
+      _$setAnswerImpl _value, $Res Function(_$setAnswerImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? soalId = null,
+    Object? jawaban = null,
+  }) {
+    return _then(_$setAnswerImpl(
+      null == soalId
+          ? _value.soalId
+          : soalId // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == jawaban
+          ? _value.jawaban
+          : jawaban // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$GetAllMateriImpl implements _GetAllMateri {
-  const _$GetAllMateriImpl();
+class _$setAnswerImpl implements _setAnswer {
+  const _$setAnswerImpl(this.soalId, this.jawaban);
+
+  @override
+  final int soalId;
+  @override
+  final String jawaban;
 
   @override
   String toString() {
-    return 'MateriEvent.getMateri()';
+    return 'AnswerEvent.setAnswer(soalId: $soalId, jawaban: $jawaban)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetAllMateriImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$setAnswerImpl &&
+            (identical(other.soalId, soalId) || other.soalId == soalId) &&
+            (identical(other.jawaban, jawaban) || other.jawaban == jawaban));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, soalId, jawaban);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$setAnswerImplCopyWith<_$setAnswerImpl> get copyWith =>
+      __$$setAnswerImplCopyWithImpl<_$setAnswerImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getMateri,
+    required TResult Function(int soalId, String jawaban) setAnswer,
   }) {
-    return getMateri();
+    return setAnswer(soalId, jawaban);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getMateri,
+    TResult? Function(int soalId, String jawaban)? setAnswer,
   }) {
-    return getMateri?.call();
+    return setAnswer?.call(soalId, jawaban);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getMateri,
+    TResult Function(int soalId, String jawaban)? setAnswer,
     required TResult orElse(),
   }) {
-    if (getMateri != null) {
-      return getMateri();
+    if (setAnswer != null) {
+      return setAnswer(soalId, jawaban);
     }
     return orElse();
   }
@@ -246,62 +280,69 @@ class _$GetAllMateriImpl implements _GetAllMateri {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_GetAllMateri value) getMateri,
+    required TResult Function(_setAnswer value) setAnswer,
   }) {
-    return getMateri(this);
+    return setAnswer(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_GetAllMateri value)? getMateri,
+    TResult? Function(_setAnswer value)? setAnswer,
   }) {
-    return getMateri?.call(this);
+    return setAnswer?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_GetAllMateri value)? getMateri,
+    TResult Function(_setAnswer value)? setAnswer,
     required TResult orElse(),
   }) {
-    if (getMateri != null) {
-      return getMateri(this);
+    if (setAnswer != null) {
+      return setAnswer(this);
     }
     return orElse();
   }
 }
 
-abstract class _GetAllMateri implements MateriEvent {
-  const factory _GetAllMateri() = _$GetAllMateriImpl;
+abstract class _setAnswer implements AnswerEvent {
+  const factory _setAnswer(final int soalId, final String jawaban) =
+      _$setAnswerImpl;
+
+  int get soalId;
+  String get jawaban;
+  @JsonKey(ignore: true)
+  _$$setAnswerImplCopyWith<_$setAnswerImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$MateriState {
+mixin _$AnswerState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(String message) error,
-    required TResult Function(MateriResponseModel materi) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(String message)? error,
-    TResult? Function(MateriResponseModel materi)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(String message)? error,
-    TResult Function(MateriResponseModel materi)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -309,40 +350,40 @@ mixin _$MateriState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
     required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
     TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
     TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MateriStateCopyWith<$Res> {
-  factory $MateriStateCopyWith(
-          MateriState value, $Res Function(MateriState) then) =
-      _$MateriStateCopyWithImpl<$Res, MateriState>;
+abstract class $AnswerStateCopyWith<$Res> {
+  factory $AnswerStateCopyWith(
+          AnswerState value, $Res Function(AnswerState) then) =
+      _$AnswerStateCopyWithImpl<$Res, AnswerState>;
 }
 
 /// @nodoc
-class _$MateriStateCopyWithImpl<$Res, $Val extends MateriState>
-    implements $MateriStateCopyWith<$Res> {
-  _$MateriStateCopyWithImpl(this._value, this._then);
+class _$AnswerStateCopyWithImpl<$Res, $Val extends AnswerState>
+    implements $AnswerStateCopyWith<$Res> {
+  _$AnswerStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -359,7 +400,7 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$MateriStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$AnswerStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
@@ -373,7 +414,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'MateriState.initial()';
+    return 'AnswerState.initial()';
   }
 
   @override
@@ -390,8 +431,8 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(String message) error,
-    required TResult Function(MateriResponseModel materi) success,
   }) {
     return initial();
   }
@@ -401,8 +442,8 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(String message)? error,
-    TResult? Function(MateriResponseModel materi)? success,
   }) {
     return initial?.call();
   }
@@ -412,8 +453,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(String message)? error,
-    TResult Function(MateriResponseModel materi)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -427,8 +468,8 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
     required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
   }) {
     return initial(this);
   }
@@ -438,8 +479,8 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
     TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
   }
@@ -449,8 +490,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
     TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -460,7 +501,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements MateriState {
+abstract class _Initial implements AnswerState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -473,7 +514,7 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$MateriStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$AnswerStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
@@ -487,7 +528,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'MateriState.loading()';
+    return 'AnswerState.loading()';
   }
 
   @override
@@ -504,8 +545,8 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(String message) error,
-    required TResult Function(MateriResponseModel materi) success,
   }) {
     return loading();
   }
@@ -515,8 +556,8 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(String message)? error,
-    TResult? Function(MateriResponseModel materi)? success,
   }) {
     return loading?.call();
   }
@@ -526,8 +567,8 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(String message)? error,
-    TResult Function(MateriResponseModel materi)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -541,8 +582,8 @@ class _$LoadingImpl implements _Loading {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
     required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
   }) {
     return loading(this);
   }
@@ -552,8 +593,8 @@ class _$LoadingImpl implements _Loading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
     TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
   }
@@ -563,8 +604,8 @@ class _$LoadingImpl implements _Loading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
     TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -574,8 +615,122 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements MateriState {
+abstract class _Loading implements AnswerState {
   const factory _Loading() = _$LoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$SuccessImplCopyWith<$Res> {
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+      __$$SuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SuccessImplCopyWithImpl<$Res>
+    extends _$AnswerStateCopyWithImpl<$Res, _$SuccessImpl>
+    implements _$$SuccessImplCopyWith<$Res> {
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SuccessImpl implements _Success {
+  const _$SuccessImpl();
+
+  @override
+  String toString() {
+    return 'AnswerState.success()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+  }) {
+    return success();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+  }) {
+    return success?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Success implements AnswerState {
+  const factory _Success() = _$SuccessImpl;
 }
 
 /// @nodoc
@@ -589,7 +744,7 @@ abstract class _$$ErrorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$MateriStateCopyWithImpl<$Res, _$ErrorImpl>
+    extends _$AnswerStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
   __$$ErrorImplCopyWithImpl(
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
@@ -619,7 +774,7 @@ class _$ErrorImpl implements _Error {
 
   @override
   String toString() {
-    return 'MateriState.error(message: $message)';
+    return 'AnswerState.error(message: $message)';
   }
 
   @override
@@ -644,8 +799,8 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(String message) error,
-    required TResult Function(MateriResponseModel materi) success,
   }) {
     return error(message);
   }
@@ -655,8 +810,8 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(String message)? error,
-    TResult? Function(MateriResponseModel materi)? success,
   }) {
     return error?.call(message);
   }
@@ -666,8 +821,8 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(String message)? error,
-    TResult Function(MateriResponseModel materi)? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -681,8 +836,8 @@ class _$ErrorImpl implements _Error {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
     required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
   }) {
     return error(this);
   }
@@ -692,8 +847,8 @@ class _$ErrorImpl implements _Error {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
     TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
   }
@@ -703,8 +858,8 @@ class _$ErrorImpl implements _Error {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
     TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -714,156 +869,11 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements MateriState {
+abstract class _Error implements AnswerState {
   const factory _Error(final String message) = _$ErrorImpl;
 
   String get message;
   @JsonKey(ignore: true)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
-      __$$SuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({MateriResponseModel materi});
-}
-
-/// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$MateriStateCopyWithImpl<$Res, _$SuccessImpl>
-    implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? materi = null,
-  }) {
-    return _then(_$SuccessImpl(
-      null == materi
-          ? _value.materi
-          : materi // ignore: cast_nullable_to_non_nullable
-              as MateriResponseModel,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$SuccessImpl implements _Success {
-  const _$SuccessImpl(this.materi);
-
-  @override
-  final MateriResponseModel materi;
-
-  @override
-  String toString() {
-    return 'MateriState.success(materi: $materi)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl &&
-            (identical(other.materi, materi) || other.materi == materi));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, materi);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(String message) error,
-    required TResult Function(MateriResponseModel materi) success,
-  }) {
-    return success(materi);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(String message)? error,
-    TResult? Function(MateriResponseModel materi)? success,
-  }) {
-    return success?.call(materi);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(String message)? error,
-    TResult Function(MateriResponseModel materi)? success,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(materi);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Success value) success,
-  }) {
-    return success(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Success value)? success,
-  }) {
-    return success?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
-    TResult Function(_Success value)? success,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Success implements MateriState {
-  const factory _Success(final MateriResponseModel materi) = _$SuccessImpl;
-
-  MateriResponseModel get materi;
-  @JsonKey(ignore: true)
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

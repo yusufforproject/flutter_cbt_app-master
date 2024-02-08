@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'materi_bloc.dart';
+part of 'daftar_soal_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,58 +15,64 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$MateriEvent {
+mixin _$DaftarSoalEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getMateri,
+    required TResult Function(List<Soal> data) getDaftarSoal,
+    required TResult Function() nextSoal,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getMateri,
+    TResult? Function(List<Soal> data)? getDaftarSoal,
+    TResult? Function()? nextSoal,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getMateri,
+    TResult Function(List<Soal> data)? getDaftarSoal,
+    TResult Function()? nextSoal,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_GetAllMateri value) getMateri,
+    required TResult Function(_GetDaftarSoal value) getDaftarSoal,
+    required TResult Function(_NextSoal value) nextSoal,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_GetAllMateri value)? getMateri,
+    TResult? Function(_GetDaftarSoal value)? getDaftarSoal,
+    TResult? Function(_NextSoal value)? nextSoal,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_GetAllMateri value)? getMateri,
+    TResult Function(_GetDaftarSoal value)? getDaftarSoal,
+    TResult Function(_NextSoal value)? nextSoal,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MateriEventCopyWith<$Res> {
-  factory $MateriEventCopyWith(
-          MateriEvent value, $Res Function(MateriEvent) then) =
-      _$MateriEventCopyWithImpl<$Res, MateriEvent>;
+abstract class $DaftarSoalEventCopyWith<$Res> {
+  factory $DaftarSoalEventCopyWith(
+          DaftarSoalEvent value, $Res Function(DaftarSoalEvent) then) =
+      _$DaftarSoalEventCopyWithImpl<$Res, DaftarSoalEvent>;
 }
 
 /// @nodoc
-class _$MateriEventCopyWithImpl<$Res, $Val extends MateriEvent>
-    implements $MateriEventCopyWith<$Res> {
-  _$MateriEventCopyWithImpl(this._value, this._then);
+class _$DaftarSoalEventCopyWithImpl<$Res, $Val extends DaftarSoalEvent>
+    implements $DaftarSoalEventCopyWith<$Res> {
+  _$DaftarSoalEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -83,7 +89,7 @@ abstract class _$$StartedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StartedImplCopyWithImpl<$Res>
-    extends _$MateriEventCopyWithImpl<$Res, _$StartedImpl>
+    extends _$DaftarSoalEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
@@ -97,7 +103,7 @@ class _$StartedImpl implements _Started {
 
   @override
   String toString() {
-    return 'MateriEvent.started()';
+    return 'DaftarSoalEvent.started()';
   }
 
   @override
@@ -113,7 +119,8 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getMateri,
+    required TResult Function(List<Soal> data) getDaftarSoal,
+    required TResult Function() nextSoal,
   }) {
     return started();
   }
@@ -122,7 +129,8 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getMateri,
+    TResult? Function(List<Soal> data)? getDaftarSoal,
+    TResult? Function()? nextSoal,
   }) {
     return started?.call();
   }
@@ -131,7 +139,8 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getMateri,
+    TResult Function(List<Soal> data)? getDaftarSoal,
+    TResult Function()? nextSoal,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -144,7 +153,8 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_GetAllMateri value) getMateri,
+    required TResult Function(_GetDaftarSoal value) getDaftarSoal,
+    required TResult Function(_NextSoal value) nextSoal,
   }) {
     return started(this);
   }
@@ -153,7 +163,8 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_GetAllMateri value)? getMateri,
+    TResult? Function(_GetDaftarSoal value)? getDaftarSoal,
+    TResult? Function(_NextSoal value)? nextSoal,
   }) {
     return started?.call(this);
   }
@@ -162,7 +173,8 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_GetAllMateri value)? getMateri,
+    TResult Function(_GetDaftarSoal value)? getDaftarSoal,
+    TResult Function(_NextSoal value)? nextSoal,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -172,40 +184,185 @@ class _$StartedImpl implements _Started {
   }
 }
 
-abstract class _Started implements MateriEvent {
+abstract class _Started implements DaftarSoalEvent {
   const factory _Started() = _$StartedImpl;
 }
 
 /// @nodoc
-abstract class _$$GetAllMateriImplCopyWith<$Res> {
-  factory _$$GetAllMateriImplCopyWith(
-          _$GetAllMateriImpl value, $Res Function(_$GetAllMateriImpl) then) =
-      __$$GetAllMateriImplCopyWithImpl<$Res>;
+abstract class _$$GetDaftarSoalImplCopyWith<$Res> {
+  factory _$$GetDaftarSoalImplCopyWith(
+          _$GetDaftarSoalImpl value, $Res Function(_$GetDaftarSoalImpl) then) =
+      __$$GetDaftarSoalImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Soal> data});
 }
 
 /// @nodoc
-class __$$GetAllMateriImplCopyWithImpl<$Res>
-    extends _$MateriEventCopyWithImpl<$Res, _$GetAllMateriImpl>
-    implements _$$GetAllMateriImplCopyWith<$Res> {
-  __$$GetAllMateriImplCopyWithImpl(
-      _$GetAllMateriImpl _value, $Res Function(_$GetAllMateriImpl) _then)
+class __$$GetDaftarSoalImplCopyWithImpl<$Res>
+    extends _$DaftarSoalEventCopyWithImpl<$Res, _$GetDaftarSoalImpl>
+    implements _$$GetDaftarSoalImplCopyWith<$Res> {
+  __$$GetDaftarSoalImplCopyWithImpl(
+      _$GetDaftarSoalImpl _value, $Res Function(_$GetDaftarSoalImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$GetDaftarSoalImpl(
+      null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Soal>,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$GetAllMateriImpl implements _GetAllMateri {
-  const _$GetAllMateriImpl();
+class _$GetDaftarSoalImpl implements _GetDaftarSoal {
+  const _$GetDaftarSoalImpl(final List<Soal> data) : _data = data;
+
+  final List<Soal> _data;
+  @override
+  List<Soal> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
 
   @override
   String toString() {
-    return 'MateriEvent.getMateri()';
+    return 'DaftarSoalEvent.getDaftarSoal(data: $data)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetAllMateriImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$GetDaftarSoalImpl &&
+            const DeepCollectionEquality().equals(other._data, _data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetDaftarSoalImplCopyWith<_$GetDaftarSoalImpl> get copyWith =>
+      __$$GetDaftarSoalImplCopyWithImpl<_$GetDaftarSoalImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(List<Soal> data) getDaftarSoal,
+    required TResult Function() nextSoal,
+  }) {
+    return getDaftarSoal(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(List<Soal> data)? getDaftarSoal,
+    TResult? Function()? nextSoal,
+  }) {
+    return getDaftarSoal?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(List<Soal> data)? getDaftarSoal,
+    TResult Function()? nextSoal,
+    required TResult orElse(),
+  }) {
+    if (getDaftarSoal != null) {
+      return getDaftarSoal(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetDaftarSoal value) getDaftarSoal,
+    required TResult Function(_NextSoal value) nextSoal,
+  }) {
+    return getDaftarSoal(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetDaftarSoal value)? getDaftarSoal,
+    TResult? Function(_NextSoal value)? nextSoal,
+  }) {
+    return getDaftarSoal?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetDaftarSoal value)? getDaftarSoal,
+    TResult Function(_NextSoal value)? nextSoal,
+    required TResult orElse(),
+  }) {
+    if (getDaftarSoal != null) {
+      return getDaftarSoal(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetDaftarSoal implements DaftarSoalEvent {
+  const factory _GetDaftarSoal(final List<Soal> data) = _$GetDaftarSoalImpl;
+
+  List<Soal> get data;
+  @JsonKey(ignore: true)
+  _$$GetDaftarSoalImplCopyWith<_$GetDaftarSoalImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$NextSoalImplCopyWith<$Res> {
+  factory _$$NextSoalImplCopyWith(
+          _$NextSoalImpl value, $Res Function(_$NextSoalImpl) then) =
+      __$$NextSoalImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NextSoalImplCopyWithImpl<$Res>
+    extends _$DaftarSoalEventCopyWithImpl<$Res, _$NextSoalImpl>
+    implements _$$NextSoalImplCopyWith<$Res> {
+  __$$NextSoalImplCopyWithImpl(
+      _$NextSoalImpl _value, $Res Function(_$NextSoalImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$NextSoalImpl implements _NextSoal {
+  const _$NextSoalImpl();
+
+  @override
+  String toString() {
+    return 'DaftarSoalEvent.nextSoal()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$NextSoalImpl);
   }
 
   @override
@@ -215,29 +372,32 @@ class _$GetAllMateriImpl implements _GetAllMateri {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getMateri,
+    required TResult Function(List<Soal> data) getDaftarSoal,
+    required TResult Function() nextSoal,
   }) {
-    return getMateri();
+    return nextSoal();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getMateri,
+    TResult? Function(List<Soal> data)? getDaftarSoal,
+    TResult? Function()? nextSoal,
   }) {
-    return getMateri?.call();
+    return nextSoal?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getMateri,
+    TResult Function(List<Soal> data)? getDaftarSoal,
+    TResult Function()? nextSoal,
     required TResult orElse(),
   }) {
-    if (getMateri != null) {
-      return getMateri();
+    if (nextSoal != null) {
+      return nextSoal();
     }
     return orElse();
   }
@@ -246,62 +406,65 @@ class _$GetAllMateriImpl implements _GetAllMateri {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_GetAllMateri value) getMateri,
+    required TResult Function(_GetDaftarSoal value) getDaftarSoal,
+    required TResult Function(_NextSoal value) nextSoal,
   }) {
-    return getMateri(this);
+    return nextSoal(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_GetAllMateri value)? getMateri,
+    TResult? Function(_GetDaftarSoal value)? getDaftarSoal,
+    TResult? Function(_NextSoal value)? nextSoal,
   }) {
-    return getMateri?.call(this);
+    return nextSoal?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_GetAllMateri value)? getMateri,
+    TResult Function(_GetDaftarSoal value)? getDaftarSoal,
+    TResult Function(_NextSoal value)? nextSoal,
     required TResult orElse(),
   }) {
-    if (getMateri != null) {
-      return getMateri(this);
+    if (nextSoal != null) {
+      return nextSoal(this);
     }
     return orElse();
   }
 }
 
-abstract class _GetAllMateri implements MateriEvent {
-  const factory _GetAllMateri() = _$GetAllMateriImpl;
+abstract class _NextSoal implements DaftarSoalEvent {
+  const factory _NextSoal() = _$NextSoalImpl;
 }
 
 /// @nodoc
-mixin _$MateriState {
+mixin _$DaftarSoalState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function(List<Soal> data, int index, bool isNext) success,
     required TResult Function(String message) error,
-    required TResult Function(MateriResponseModel materi) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function(List<Soal> data, int index, bool isNext)? success,
     TResult? Function(String message)? error,
-    TResult? Function(MateriResponseModel materi)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function(List<Soal> data, int index, bool isNext)? success,
     TResult Function(String message)? error,
-    TResult Function(MateriResponseModel materi)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -309,40 +472,40 @@ mixin _$MateriState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
     required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
     TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
     TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MateriStateCopyWith<$Res> {
-  factory $MateriStateCopyWith(
-          MateriState value, $Res Function(MateriState) then) =
-      _$MateriStateCopyWithImpl<$Res, MateriState>;
+abstract class $DaftarSoalStateCopyWith<$Res> {
+  factory $DaftarSoalStateCopyWith(
+          DaftarSoalState value, $Res Function(DaftarSoalState) then) =
+      _$DaftarSoalStateCopyWithImpl<$Res, DaftarSoalState>;
 }
 
 /// @nodoc
-class _$MateriStateCopyWithImpl<$Res, $Val extends MateriState>
-    implements $MateriStateCopyWith<$Res> {
-  _$MateriStateCopyWithImpl(this._value, this._then);
+class _$DaftarSoalStateCopyWithImpl<$Res, $Val extends DaftarSoalState>
+    implements $DaftarSoalStateCopyWith<$Res> {
+  _$DaftarSoalStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -359,7 +522,7 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$MateriStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$DaftarSoalStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
@@ -373,7 +536,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'MateriState.initial()';
+    return 'DaftarSoalState.initial()';
   }
 
   @override
@@ -390,8 +553,8 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function(List<Soal> data, int index, bool isNext) success,
     required TResult Function(String message) error,
-    required TResult Function(MateriResponseModel materi) success,
   }) {
     return initial();
   }
@@ -401,8 +564,8 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function(List<Soal> data, int index, bool isNext)? success,
     TResult? Function(String message)? error,
-    TResult? Function(MateriResponseModel materi)? success,
   }) {
     return initial?.call();
   }
@@ -412,8 +575,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function(List<Soal> data, int index, bool isNext)? success,
     TResult Function(String message)? error,
-    TResult Function(MateriResponseModel materi)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -427,8 +590,8 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
     required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
   }) {
     return initial(this);
   }
@@ -438,8 +601,8 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
     TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
   }
@@ -449,8 +612,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
     TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -460,7 +623,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements MateriState {
+abstract class _Initial implements DaftarSoalState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -473,7 +636,7 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$MateriStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$DaftarSoalStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
@@ -487,7 +650,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'MateriState.loading()';
+    return 'DaftarSoalState.loading()';
   }
 
   @override
@@ -504,8 +667,8 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function(List<Soal> data, int index, bool isNext) success,
     required TResult Function(String message) error,
-    required TResult Function(MateriResponseModel materi) success,
   }) {
     return loading();
   }
@@ -515,8 +678,8 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function(List<Soal> data, int index, bool isNext)? success,
     TResult? Function(String message)? error,
-    TResult? Function(MateriResponseModel materi)? success,
   }) {
     return loading?.call();
   }
@@ -526,8 +689,8 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function(List<Soal> data, int index, bool isNext)? success,
     TResult Function(String message)? error,
-    TResult Function(MateriResponseModel materi)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -541,8 +704,8 @@ class _$LoadingImpl implements _Loading {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
     required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
   }) {
     return loading(this);
   }
@@ -552,8 +715,8 @@ class _$LoadingImpl implements _Loading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
     TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
   }
@@ -563,8 +726,8 @@ class _$LoadingImpl implements _Loading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
     TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -574,8 +737,181 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements MateriState {
+abstract class _Loading implements DaftarSoalState {
   const factory _Loading() = _$LoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$SuccessImplCopyWith<$Res> {
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+      __$$SuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Soal> data, int index, bool isNext});
+}
+
+/// @nodoc
+class __$$SuccessImplCopyWithImpl<$Res>
+    extends _$DaftarSoalStateCopyWithImpl<$Res, _$SuccessImpl>
+    implements _$$SuccessImplCopyWith<$Res> {
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? index = null,
+    Object? isNext = null,
+  }) {
+    return _then(_$SuccessImpl(
+      null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Soal>,
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == isNext
+          ? _value.isNext
+          : isNext // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SuccessImpl implements _Success {
+  const _$SuccessImpl(final List<Soal> data, this.index, this.isNext)
+      : _data = data;
+
+  final List<Soal> _data;
+  @override
+  List<Soal> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
+
+  @override
+  final int index;
+  @override
+  final bool isNext;
+
+  @override
+  String toString() {
+    return 'DaftarSoalState.success(data: $data, index: $index, isNext: $isNext)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SuccessImpl &&
+            const DeepCollectionEquality().equals(other._data, _data) &&
+            (identical(other.index, index) || other.index == index) &&
+            (identical(other.isNext, isNext) || other.isNext == isNext));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_data), index, isNext);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<Soal> data, int index, bool isNext) success,
+    required TResult Function(String message) error,
+  }) {
+    return success(data, index, isNext);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<Soal> data, int index, bool isNext)? success,
+    TResult? Function(String message)? error,
+  }) {
+    return success?.call(data, index, isNext);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<Soal> data, int index, bool isNext)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(data, index, isNext);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Success implements DaftarSoalState {
+  const factory _Success(
+          final List<Soal> data, final int index, final bool isNext) =
+      _$SuccessImpl;
+
+  List<Soal> get data;
+  int get index;
+  bool get isNext;
+  @JsonKey(ignore: true)
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -589,7 +925,7 @@ abstract class _$$ErrorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$MateriStateCopyWithImpl<$Res, _$ErrorImpl>
+    extends _$DaftarSoalStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
   __$$ErrorImplCopyWithImpl(
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
@@ -619,7 +955,7 @@ class _$ErrorImpl implements _Error {
 
   @override
   String toString() {
-    return 'MateriState.error(message: $message)';
+    return 'DaftarSoalState.error(message: $message)';
   }
 
   @override
@@ -644,8 +980,8 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function(List<Soal> data, int index, bool isNext) success,
     required TResult Function(String message) error,
-    required TResult Function(MateriResponseModel materi) success,
   }) {
     return error(message);
   }
@@ -655,8 +991,8 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function(List<Soal> data, int index, bool isNext)? success,
     TResult? Function(String message)? error,
-    TResult? Function(MateriResponseModel materi)? success,
   }) {
     return error?.call(message);
   }
@@ -666,8 +1002,8 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function(List<Soal> data, int index, bool isNext)? success,
     TResult Function(String message)? error,
-    TResult Function(MateriResponseModel materi)? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -681,8 +1017,8 @@ class _$ErrorImpl implements _Error {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
     required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
   }) {
     return error(this);
   }
@@ -692,8 +1028,8 @@ class _$ErrorImpl implements _Error {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
     TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
   }
@@ -703,8 +1039,8 @@ class _$ErrorImpl implements _Error {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
     TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -714,156 +1050,11 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements MateriState {
+abstract class _Error implements DaftarSoalState {
   const factory _Error(final String message) = _$ErrorImpl;
 
   String get message;
   @JsonKey(ignore: true)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
-      __$$SuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({MateriResponseModel materi});
-}
-
-/// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$MateriStateCopyWithImpl<$Res, _$SuccessImpl>
-    implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? materi = null,
-  }) {
-    return _then(_$SuccessImpl(
-      null == materi
-          ? _value.materi
-          : materi // ignore: cast_nullable_to_non_nullable
-              as MateriResponseModel,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$SuccessImpl implements _Success {
-  const _$SuccessImpl(this.materi);
-
-  @override
-  final MateriResponseModel materi;
-
-  @override
-  String toString() {
-    return 'MateriState.success(materi: $materi)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl &&
-            (identical(other.materi, materi) || other.materi == materi));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, materi);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(String message) error,
-    required TResult Function(MateriResponseModel materi) success,
-  }) {
-    return success(materi);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(String message)? error,
-    TResult? Function(MateriResponseModel materi)? success,
-  }) {
-    return success?.call(materi);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(String message)? error,
-    TResult Function(MateriResponseModel materi)? success,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(materi);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Success value) success,
-  }) {
-    return success(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Success value)? success,
-  }) {
-    return success?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
-    TResult Function(_Success value)? success,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Success implements MateriState {
-  const factory _Success(final MateriResponseModel materi) = _$SuccessImpl;
-
-  MateriResponseModel get materi;
-  @JsonKey(ignore: true)
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

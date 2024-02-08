@@ -34,22 +34,26 @@ class _AboutUsPageState extends State<AboutUsPage> {
             loading: () => const Center(child: CircularProgressIndicator(),),
             success: (data) {
               return ListView(
-                padding: const EdgeInsets.fromLTRB(30.0, 0, 30.0, 30.0),
                 children: [
-                  data.data.isEmpty
-                    ? const SizedBox()
-                    : CachedNetworkImage(
-                      imageUrl : data.data[0].image,
-                      placeholder: (context, url) =>
-                        const CircularProgressIndicator(),
-                      errorWidget: (context, url, error) => 
-                        const Icon(Icons.error),
-                      width: context.deviceWidth,
-                      height: 470.0,
-                      fit: BoxFit.cover,
+                  ClipRRect(
+                    borderRadius: const BorderRadius.vertical(
+                      top: Radius.circular(30.0)
                     ),
+                    child: data.data.isEmpty
+                      ? const SizedBox()
+                      : CachedNetworkImage(
+                        imageUrl : data.data[0].image,
+                        placeholder: (context, url) =>
+                          const CircularProgressIndicator(),
+                        errorWidget: (context, url, error) => 
+                          const Icon(Icons.error),
+                        width: context.deviceWidth,
+                        height: 470.0,
+                        fit: BoxFit.cover,
+                      ),
+                  ),
                   Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(18.0),
                     child: Text(
                       data.data.isEmpty ? 'no content' : data.data[0].content,
                       textAlign: TextAlign.justify,
